@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hotelmanagementsystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar(max)" />
+    <Property Name="ProfileImage" Type="nvarchar(max)" />
+    <Property Name="DateJoined" Type="datetime2" Precision="7" />
+    <Property Name="status" Type="bit" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" />
+    <Property Name="UpdatedBy" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="UPdateDate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="hotelmanagementsystemModelStoreContainer">
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
